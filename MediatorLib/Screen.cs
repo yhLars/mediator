@@ -9,8 +9,8 @@ namespace MediatorLib
         public Screen(ComputerSystem computerSystem)
         {
             _computerSystem = computerSystem;
-            _computerSystem.RegisterScreen(this);
             Debug.WriteLine("Screen is instantiated");
+            _computerSystem.RegisterScreen(this);
         }
 
         public void TurnOn()

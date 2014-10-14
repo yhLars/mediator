@@ -9,8 +9,8 @@ namespace MediatorLib
         public Computer(ComputerSystem computerSystem)
         {
             _computerSystem = computerSystem;
-            _computerSystem.RegisterComputer(this);
             Debug.WriteLine("Computer is instantiated");
+            _computerSystem.RegisterComputer(this);
         }
 
         public void SwitchOn()

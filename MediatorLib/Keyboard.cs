@@ -9,8 +9,8 @@ namespace MediatorLib
         public Keyboard(ComputerSystem computerSystem)
         {
             _computerSystem = computerSystem;
-            _computerSystem.RegisterKeyboard(this);
             Debug.WriteLine("Keyboard is instantiated");
+            _computerSystem.RegisterKeyboard(this);
         }
 
         public void Enabled()
@@ -23,9 +23,10 @@ namespace MediatorLib
             Debug.WriteLine("Keyboard disabled");
         }
 
-        public void KeyPressed()
+        public char KeyPressed(char keyPressed)
         {
-            Debug.WriteLine("Keyboard key pressed");
+            Debug.WriteLine("Keyboard key pressed: '" + keyPressed + "'");
+            return keyPressed;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace MediatorTests
             Keyboard keyboard = new Keyboard(computerSystem);
 
             computer.SwitchOn();
-            keyboard.KeyPressed();
+            keyboard.KeyPressed(expectedCharacterFromScreenDisplayCharacter);
             char actualCharacterFromScreenDisplayCharacter = screen.DisplayCharacter(expectedCharacterFromScreenDisplayCharacter);
 
             // ASSERT

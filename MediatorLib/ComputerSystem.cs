@@ -35,9 +35,10 @@ namespace MediatorLib
             _computer.SwitchOff();
         }
 
-        internal void KeyboardKeyPressed(Keyboard keyboard)
+        public void KeyboardKeyPressed(char keyPressed)
         {
-            _keyboard.KeyPressed();
+            _screen.DisplayCharacter(keyPressed);
+            Debug.WriteLine("ComputerSystem passes keyPressed to Screen");
         }
     }
 }
